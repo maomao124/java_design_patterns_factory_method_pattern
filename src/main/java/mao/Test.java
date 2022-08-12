@@ -15,5 +15,11 @@ package mao;
 
 public class Test
 {
-
+    public static void main(String[] args)
+    {
+        Coffee coffee = new CoffeeStore(new AmericanCoffeeFactory()).orderCoffee();
+        System.out.println(coffee.getName());
+        coffee = new CoffeeStore(new LatteCoffeeFactory()).orderCoffee();
+        System.out.println(coffee.getName());
+    }
 }
